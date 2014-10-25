@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Angle - Dashboard</title>
+	
+	<link rel="stylesheet/less" href="master/less/simple-line-icons.less" media="all" />
+	<link rel="stylesheet/less" href="master/less/bootstrap.less" media="all" />
+	<link rel="stylesheet/less" href="master/less/style.less" media="all" />
+    <script src="app/js/less-1.7.5.min.js"></script>
+	<style>
+	
+	
+	
+	</style>
+	
+  </head>
+
+  <body>
+  
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button> -->
+          <a class="navbar-brand" href="#">
+		  <div class="brand-logo">
+		  <img src="app/img/logo.png" class="img-responsive"/>
+		  </div>
+		  
+		  <div class="brand-logo-collapsed">
+            <img class="img-responsive" alt="App Logo" src="app/img/logo-single.png">
+         </div>
+		  </a>		  
+        </div>
+		
+		<div class="nav-wrapper">
+      <!-- START Left navbar-->
+      <ul class="nav navbar-nav">
+         <li>
+            <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+            <a  id="slider_toogle" href="javascript:;">
+               <span class="glyphicon glyphicon-align-justify"></span>
+            </a>
+            <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
+           <!--  <a class="visible-xs sidebar-toggle" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" href="#">
+               <em class="glyphicon glyphicon-user" ></em>
+            </a> -->
+         </li>
+         <!-- START User avatar toggle-->
+         <li class="hidden-xs">
+            <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+            <a id="slide_down" href="javascript:void(0);">
+               <em class="icon-user"></em>
+            </a>
+         </li>
+         <!-- END User avatar toggle-->       
+      </ul>
+      <!-- END Left navbar-->
+      <!-- START Right Navbar-->
+      <ul class="nav navbar-nav navbar-right hidden-xs">
+         <!-- Search icon-->
+         <li>
+            <a search-open="search-open" href="#">
+               <em class="icon-notebook"></em>
+            </a>
+         </li>
+         <!-- Fullscreen (only desktops)-->        
+        
+        
+      </ul>
+      <!-- END Right Navbar-->
+   </div>       
+      </div>
+    </div>
+	
+	
+	  
+	
+	<!-- Side bar -->
+	<aside class="aside">
+		<div class="aside-inner ng-scope">
+			<nav class="sidebar">
+				<ul class="nav ng-scope">
+					<li class="has-user-block" id="slide_down_area">
+						<div ng-controller="UserBlockController" collapse="userBlockVisible" class="ng-scope collapse in" style="height: auto;">
+						   <div class="item user-block">
+							  <!-- User picture-->
+							  <div class="user-block-picture">
+								 <div class="user-block-status">
+									<img width="60" height="60" class="img-thumbnail img-circle" alt="Avatar" ng-src="app/img/user/02.jpg" src="app/img/02.jpg">
+									<div class="circle circle-success circle-lg"></div>
+								 </div>
+							  </div>
+							  <!-- Name and Job-->
+							  <div class="user-block-info">
+								 <span class="user-block-name ng-binding">Welcome John</span>
+								 <span class="user-block-role ng-binding">ng-Dev</span>
+							  </div>
+						   </div>
+						</div>
+					</li>
+					
+					<li class="ng-scope nav-heading">
+					   <span class="ng-scope ng-binding">Main Navigation</span>
+					</li>
+					
+					<li class="ng-scope  active">
+					  <a title="Dashboard" class="ng-scope" href="#"><em class="icon-speedometer"></em>
+					  <span class="ng-scope ng-binding">Dashboard</span></a>
+					</li>
+					
+					<li class="ng-scope" >
+					  <a title="Widgets" class="ng-scope" href="#"><em class="icon-grid"></em>
+					  <div class="label label-success pull-right ng-binding ng-scope">30</div><span class="ng-scope ng-binding">Widgets</span></a>
+					</li>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				</ul>
+			
+			
+			
+			</nav>		
+		</div>
+	
+	
+	
+	</aside>
+	
+	
+	
+	
+	
+	<!-- Side bar -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+    <div class="container-fluid">
+      <div class="row">
+	  
+	  
+	  
+	  
+        
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster --> 
+	<script src="app/js/zepto.min.js"></script>
+	<script src="app/js/zepto-slide-transition.js"></script>
+	
+<script>
+	$(document).ready(function(){
+
+		$('#slider_toogle').click(function(){
+		$('#slide_down_area').css('height','auto');
+		  if($('body').hasClass("aside-collapsed"))
+		  {
+		  $('body').removeClass("aside-collapsed")
+		  } else {
+		  $('body').addClass("aside-collapsed")
+		  }
+
+		})
+		
+	
+		$('#slide_down_area').hide();
+		$('#slide_down').click(function(){
+		$('#slide_down_area').css('height',null);
+			$('#slide_down_area').slideToggle();
+		})
+	
+		
+	})
+	
+	
+
+	</script>
+
+
+
+  </body>
+</html>
